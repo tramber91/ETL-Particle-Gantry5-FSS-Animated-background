@@ -1,0 +1,22 @@
+.etl-particle-fss .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	 &.zindex1 {
+        z-index: -1;
+    }
+	 &.zindex0 {
+        z-index: 0;
+    }
+	&.zindex101 {
+        z-index: 101;
+    }
+	&.zindex1001 {
+        z-index: 10001;
+    }
+}
+
+.etl-particle-fss .container canvas {max-width: 100%;}
+.etl-particle-fss .container .height100 canvas {height:100%}

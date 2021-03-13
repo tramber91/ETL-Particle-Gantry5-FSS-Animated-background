@@ -1,0 +1,139 @@
+name: ETL FSS JS
+description: A lightweight particle for creating animated background with FLAT SURFACE SHADER js.
+type: particle
+icon: fa-adjust
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable particle.
+      default: true
+
+    titel:
+      type: separator.note
+      class: settings-param
+      content: '<div style="color: #5fa0c0"><h4>FSS particle</h4></div><div class="float-left"><img src="http://www.demo-gantry5.en-toutes-lettres.fr/images/etl_gantry_particles.png" alt="En toutes lettres - gantry particles"></div><div class="settings-param-field">&nbsp;&nbsp;&nbsp;<a href="http://www.demo-gantry5.en-toutes-lettres.fr/en/particles-en/fss-en" target="_blank">See demo&nbsp;<i class="fa fa-fw fa-external-link"></i></a></div>'
+
+    _tabs:
+      type: container.tabs
+      fields:
+        _tab_preset:
+          label: FSS Preset
+          fields:
+            custompresetinfo1:
+              type: separator.note
+              class: alert alert-info
+              content: Simple, lightweight <strong>Flat Surface Shader</strong> written in <strong>JavaScript</strong> for rendering lit <strong>Triangles</strong> to a number of contexts developped by Matthew Wagerfield and Tobias van Schneider. Check out this <a href="http://wagerfield.github.com/flat-surface-shader/" target="_blank">demo</a> to see it in action. Select <strong>Custom</strong> in configuration preset if you want to use custom FSS setting.
+
+            conf_presets:
+              type: select.select
+              label: Configuration Preset
+              description: Preconfigured presets for your background animation. Select Custom if you want to use custom FSS setting
+              default: etl
+              options:
+                etl: Green - ETL color
+                yellow: Yellow
+                orange: Orange
+                red: Red
+                blue: Blue
+                darkblue: Dark Blue
+                mauve: Mauve
+                custom: Custom
+            stylezindex:
+              type: select.selectize
+              label: z-index
+              description: Canvas z-index CSS modification (if needed) - défault -1
+              default:  zindex1
+              options:
+                zindex1: z-index: -1
+                zindex0: z-index: 0
+                zindex101: z-index: 101
+                zindex1001: z-index: 1001
+            stylecanvasheight:
+              type: select.selectize
+              label: Canvas height
+              description: Canvas height CSS modification (if needed) - none or 100%
+              default:  heightnone
+              options:
+                heightnone: none
+                height100: height 100%
+            class:
+              type: input.selectize
+              label: CSS Classes
+              description: CSS class name for the particle.
+        _tab_mesh:
+          label: Custom MESH config
+          fields:
+            custompresetinfo2:
+              type: separator.note
+              class: alert alert-info
+              content: You have selected <strong>Custom</strong> render in Configuration Preset. Adjust <strong>MESH properties</strong> of canvas with dedicated values. See <a href="http://wagerfield.github.com/flat-surface-shader/" target="_blank">demo</a> to understand what you do.
+            meshambientcolor:
+              type: input.colorpicker
+              label: MESH Ambient color
+              default: "#ffffff"
+            meshdiffusecolor:
+              type: input.colorpicker
+              label: MESH Diffuse color
+              default: "#666666"
+            meshwidth:
+              type: input.text
+              label: MESH Width
+              default: '1.2'
+            meshheight:
+              type: input.text
+              label: MESH Height
+              default: '1.2'
+            meshdepth:
+              type: input.text
+              label: MESH Depth
+              default: '10'
+            meshsegments:
+              type: input.text
+              label: MESH Segments
+              default: '12'
+            meshslices:
+              type: input.text
+              label: MESH Slices
+              default: '15'
+            meshxrange:
+              type: input.text
+              label: MESH xRange
+              default: '0.5'
+            meshyrange:
+              type: input.text
+              label: MESH yRange
+              default: '0.2'
+            meshspeed:
+              type: input.text
+              label: MESH Speed
+              default: '0.0004'
+        _tab_light:
+          label: Custom LIGHT config
+          fields:
+            custompresetinfo3:
+              type: separator.note
+              class: alert alert-info
+              content: You have selected <strong>Custom</strong> render in Configuration Preset. Adjust <strong>LIGHT properties</strong> of canvas with dedicated values. See <a href="http://wagerfield.github.com/flat-surface-shader/" target="_blank">demo</a> to understand what you do.
+            lightambientcolor:
+              type: input.colorpicker
+              label: LIGHT Ambient color
+              default: "#1b3840"
+            lightdiffusecolor:
+              type: input.colorpicker
+              label: LIGHT Diffuse color
+              default: "#597982"
+            lightcount:
+              type: input.text
+              label: LIGHT Count
+              default: '2'
+            lightzoffset:
+              type: input.text
+              label: LIGHT zOffset
+              default: '200'
+            lightspeed:
+              type: input.text
+              label: LIGHT Speed
+              default: '0.0004'

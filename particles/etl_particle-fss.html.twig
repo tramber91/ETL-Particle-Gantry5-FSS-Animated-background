@@ -1,0 +1,59 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+<div class="etl-particle-fss {{ particle.class }}">
+  <div id="container" class="container {{ particle.stylezindex }}">
+    <div id="output" class="container {{ particle.stylecanvasheight }}"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript_footer %}
+  <script src="{{ url('gantry-theme://js/fss.min.js') }}"></script>
+  {% if particle.conf_presets == "custom" %}
+   <script type="text/javascript">
+    var MESH = {
+    width: {{ particle.meshwidth|raw }},
+    height: {{ particle.meshheight|raw }},
+    depth: {{ particle.meshdepth|raw }},
+    segments: {{ particle.meshsegments|raw }},
+    slices: {{ particle.meshslices|raw }},
+    xRange: {{ particle.meshxrange|raw }},
+    yRange: {{ particle.meshyrange|raw }},
+    zRange: 1.0,
+    ambient: '{{ particle.meshambientcolor|raw }}',
+    diffuse: '{{ particle.meshdiffusecolor|raw }}',
+    speed: {{ particle.meshspeed|raw }}
+};
+
+  //------------------------------
+  // Light Properties
+  //------------------------------
+  var LIGHT = {
+	count: {{ particle.lightcount|raw }},
+    xyScalar: 1,
+    zOffset: {{ particle.lightzoffset|raw }},
+    ambient: '{{ particle.lightambientcolor|raw }}',
+    diffuse: '{{ particle.lightdiffusecolor|raw }}',
+    speed: {{ particle.lightspeed|raw }},
+    gravity: 6000,
+    dampening: 0.001,
+    minLimit: 10,
+    maxLimit: null,
+    minDistance: 20,
+    maxDistance: 400,
+    autopilot: true,
+    draw: false,
+    bounds: FSS.Vector3.create(),
+    step: FSS.Vector3.create(
+        Math.randomInRange(0.2, 1.0),
+        Math.randomInRange(0.2, 1.0),
+        Math.randomInRange(0.2, 1.0)
+    )
+};
+  	</script>
+  {% else %}
+  <script src="{{ url('gantry-theme://js/fss-config-' ~ particle.conf_presets ~ '.js') }}"></script>
+  {% endif %}
+	<script src="{{ url('gantry-theme://js/fss-render.js') }}"></script>
+{% endblock %}

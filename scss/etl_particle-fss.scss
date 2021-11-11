@@ -2,8 +2,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
+	margin:0;
+	padding:0;
 	 &.zindex1 {
         z-index: -1;
     }
@@ -18,5 +20,37 @@
     }
 }
 
-.etl-particle-fss .container canvas {max-width: 100%;}
-.etl-particle-fss .container .height100 canvas {height:100%}
+
+.etl-particle-fss .container canvas {max-height:100%;}
+.etl-particle-fss .container .height100 canvas {height:100% !important;}
+
+
+@media (min-width: 576px) {
+  .etl-particle-fss .container {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .etl-particle-fss .container{
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .etl-particle-fss .container {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etl-particle-fss .container {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .etl-particle-fss .container {
+    max-width: 100% !important;
+  }
+}

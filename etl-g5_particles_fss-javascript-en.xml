@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="1.0">
     <name>ETL particle G5 FSS (EN)</name>
-    <version>1.1</version>
-    <creationDate>01.09.2017</creationDate>
+    <version>1.2</version>
+    <creationDate>11.11.2021</creationDate>
     <author>Bertrand Pascal - En Toutes Lettres</author>
     <authorEmail>webmaster@en-toutes-lettres.fr</authorEmail>
     <authorUrl>http://www.en-toutes-lettres.fr</authorUrl>
-    <copyright>(C) 2017 En Toutes Lettres</copyright>
+    <copyright>(C) 2021 En Toutes Lettres</copyright>
     <license>MIT - see LICENSE.pdf</license>
     <packager>En Toutes Lettres</packager>
     <packagerurl>https://www.en-toutes-lettres.fr</packagerurl>
     <description>
-        <![CDATA[<h3>Particle "FSS javascript" for Gantry 5 v1.1 - Template Hydrogen (English version)</h3>
+        <![CDATA[<h3>Particle "FSS javascript" for Gantry 5.5 v1.2 - Template Hydrogen (English version)</h3>
 		<h4>FLAT SURFACE SHADER javascript is a collaborative effort between Matthew Wagerfield and Tobias van Schneider</h4> 
 		<h4>Adaptation for Hydrogen by En Toutes Lettres (https://www.en-toutes-lettres.fr)</h4>
 		<h4>Don't forget to add this line</h4>

@@ -1,0 +1,137 @@
+name: ETL FSS v3.0
+description: Une particule Gantry 5 légère pour la création d'arrière-plan animé avec FLAT SURFACE SHADER (FSS).
+type: particle
+icon: fa-adjust
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Publier
+      description: Publier la particule.
+      default: true
+
+    titel:
+      type: separator.note
+      class: settings-param
+      content: '<div style="color: #5fa0c0"><h4>Particule FSS v3.0</h4></div><div class="float-left"><img src="http://www.demo-gantry5.en-toutes-lettres.fr/images/etl_gantry_particles.png" alt="En toutes lettres - gantry particles"></div><div class="settings-param-field">&nbsp;&nbsp;&nbsp;<a href="http://www.demo-gantry5.en-toutes-lettres.fr/particles-fr/fss-fr" target="_blank">See demo&nbsp;<i class="fa fa-fw fa-external-link"></i></a></div>'
+
+    _tabs:
+      type: container.tabs
+      fields:
+        _tab_preset:
+          label: Préréglages FSS
+          fields:
+            custompresetinfo1:
+              type: separator.note
+              class: alert alert-info
+              content: L'arrière-plan animé <strong>"Flat Surface Shader (FSS)"</strong> a été écrit en JavaScript par Matthew Wagerfield et Tobias van Schneider pour rendre les Triangles éclairés dans plusieurs contextes.Regarder <a href="http://wagerfield.github.com/flat-surface-shader/" target="_blank">la démo</a> pour la voir en action. Selectionner <strong>Personnalisé</strong> dans Configuration preset si vous souhaitez utiliser les paramètres FSS personnalisés.
+
+            conf_presets:
+              type: select.select
+              label: Configuration Preset
+              description: Préréglages configurés pour votre animation d'arrière-plan. Sélectionnez "Personnalisé" si vous souhaitez utiliser les paramètres FSS personnalisés
+              default: etl
+              options:
+                etl: Vert - couleur ETL
+                yellow: Jaune
+                orange: Orange
+                red: Rouge
+                blue: Bleu
+                darkblue: Bleu foncé
+                mauve: Mauve
+                custom: Personnalisé
+            stylezindex:
+              type: select.selectize
+              label: z-index
+              description: Modification CSS pour le z-index du Canvas (si nécessaire) - défault -1
+              default:  zindex1
+              options:
+                zindex1: z-index: -1
+                zindex0: z-index: 0
+            stylecanvasheight:
+              type: select.selectize
+              label: Hauteur
+              description: Modification CSS de la hauteur du Canvas (si nécessaire) - aucune ou 100%
+              default:  heightnone
+              options:
+                heightnone: Aucune
+                height100: Hauteur 100%
+            class:
+              type: input.selectize
+              label: Classe CSS
+              description: Classe CSS de la particule.
+        _tab_mesh:
+          label: Config. maillage (MESH)
+          fields:
+            custompresetinfo2:
+              type: separator.note
+              class: alert alert-info
+              content: Vous avez sélectionné <strong>Personnalisé</strong> dans Configuration Preset. Ajustez les propriétés du <strong>Maillage (MESH)</strong> avec vos valeurs personnelles. Voir la <a href="http://wagerfield.github.com/flat-surface-shader/" target="_blank">démo </a> pour comprendre ce que vous faites.
+            meshambientcolor:
+              type: input.colorpicker
+              label: MESH Couleur ambiante
+              default: "#ffffff"
+            meshdiffusecolor:
+              type: input.colorpicker
+              label: MESH Couleur diffuse
+              default: "#666666"
+            meshwidth:
+              type: input.text
+              label: MESH Largeur
+              default: '1.2'
+            meshheight:
+              type: input.text
+              label: MESH Hauteur
+              default: '1.2'
+            meshdepth:
+              type: input.text
+              label: MESH Profondeur
+              default: '10'
+            meshsegments:
+              type: input.text
+              label: MESH Segments
+              default: '12'
+            meshslices:
+              type: input.text
+              label: MESH Slices
+              default: '15'
+            meshxrange:
+              type: input.text
+              label: MESH xRange
+              default: '0.5'
+            meshyrange:
+              type: input.text
+              label: MESH yRange
+              default: '0.2'
+            meshspeed:
+              type: input.text
+              label: MESH Vitesse
+              default: '0.0004'
+        _tab_light:
+          label: Config. Lumière (LIGHT)
+          fields:
+            custompresetinfo3:
+              type: separator.note
+              class: alert alert-info
+              content: Vous avez sélectionné <strong>Personnalisé</strong> dans Configuration Preset. Ajustez les propriétés de la  <strong>Lumière (LIGHT)</strong> avec vos valeurs personnelles. Voir la <a href="http://wagerfield.github.com/flat-surface-shader/" target="_blank">démo </a> pour comprendre ce que vous faites.
+            lightambientcolor:
+              type: input.colorpicker
+              label: LIGHT Couleur ambiante
+              default: "#1b3840"
+            lightdiffusecolor:
+              type: input.colorpicker
+              label: LIGHT Couleur diffuse
+              default: "#597982"
+            lightcount:
+              type: input.text
+              label: LIGHT Count (Contrast)
+              default: '2'
+            lightzoffset:
+              type: input.text
+              label: LIGHT zOffset
+              default: '200'
+            lightspeed:
+              type: input.text
+              label: LIGHT Vitesse
+              default: '0.0004'

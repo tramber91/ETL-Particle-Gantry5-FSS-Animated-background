@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="1.0">
-    <name>ETL particle G5 FSS (EN)</name>
-    <version>1.2</version>
-    <creationDate>11.11.2021</creationDate>
+    <name>ETL particle G5 FSS v1.3</name>
+    <version>1.3</version>
+    <creationDate>01.01.2022</creationDate>
     <author>Bertrand Pascal - En Toutes Lettres</author>
     <authorEmail>webmaster@en-toutes-lettres.fr</authorEmail>
     <authorUrl>http://www.en-toutes-lettres.fr</authorUrl>
@@ -11,16 +11,20 @@
     <packager>En Toutes Lettres</packager>
     <packagerurl>https://www.en-toutes-lettres.fr</packagerurl>
     <description>
-        <![CDATA[<h3>Particle "FSS javascript" for Gantry 5.5 v1.2 - Template Hydrogen (English version)</h3>
+        <![CDATA[<h3>Particle "FSS javascript" for Gantry 5.5 v1.3 - Template Hydrogen</h3>
 		<h4>FLAT SURFACE SHADER javascript is a collaborative effort between Matthew Wagerfield and Tobias van Schneider</h4> 
 		<h4>Adaptation for Hydrogen by En Toutes Lettres (https://www.en-toutes-lettres.fr)</h4>
-		<h4>Don't forget to add this line</h4>
+		<h4>Compatible Joomla 4!</h3>
+        <h4>For french version, in your folder "/templates/g5_hydrogen/custom/particles"<br /><span style="color:#0000FF">rename file "etl_particle-fss.yaml" to "etl_particle-fss_EN.yaml"<br />rename file "etl_particle-fss_FR.yaml" to "etl_particle-fss.yaml"</span></h4>
+		<br />
+		<h4>Don't forget to add these 2 lines</h4>
+		<h3><span style="color:#0000FF">@import 'dependencies';</span></h3>
         <h3><span style="color:#0000FF">@import 'etl_particle-fss'; </span></h3>
-        <h4>in your custom CSS file, custom.scss (/templates/g5_hydrogen/custom/scss/custom.scss)</h4>
-        <h4>or create this file and add this line with your text editor (/templates/g5_hydrogen/custom/scss/custom.scss)</h4>]]>
+        <h4>in your custom SCSS file, custom.scss (/templates/g5_hydrogen/custom/scss/custom.scss)</h4>
+        <h4>or create this file and add these 2 lines with your text editor (/templates/g5_hydrogen/custom/scss/custom.scss)</h4>]]>
     </description>
     <fileset>
-        <files folder="particles" target="templates/g5_hydrogen/custom/particles"><filename>etl_particle-fss.html.twig</filename><filename>etl_particle-fss.yaml</filename></files>
+        <files folder="particles" target="templates/g5_hydrogen/custom/particles"><filename>etl_particle-fss.html.twig</filename><filename>etl_particle-fss.yaml</filename><filename>etl_particle-fss_FR.yaml</filename></files>
 		<files folder="js" target="templates/g5_hydrogen/custom/js"><filename>fss.min.js</filename><filename>fss-config-blue.js</filename><filename>fss-config-darkblue.js</filename><filename>fss-config-etl.js</filename><filename>fss-config-mauve.js</filename><filename>fss-config-orange.js</filename><filename>fss-config-red.js</filename><filename>fss-config-yellow.js</filename><filename>fss-render.js</filename></files>
 		<files folder="scss" target="templates/g5_hydrogen/custom/scss"><filename>etl_particle-fss.scss</filename></files>
      </fileset>

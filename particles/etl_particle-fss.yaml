@@ -1,5 +1,5 @@
-name: ETL FSS JS
-description: A lightweight particle for creating animated background with FLAT SURFACE SHADER js.
+name: ETL FSS v3.0
+description: A lightweight gantry 5 particle for creating animated background with FLAT SURFACE SHADER js.
 type: particle
 icon: fa-adjust
 
@@ -14,7 +14,7 @@ form:
     titel:
       type: separator.note
       class: settings-param
-      content: '<div style="color: #5fa0c0"><h4>FSS particle</h4></div><div class="float-left"><img src="http://www.demo-gantry5.en-toutes-lettres.fr/images/etl_gantry_particles.png" alt="En toutes lettres - gantry particles"></div><div class="settings-param-field">&nbsp;&nbsp;&nbsp;<a href="http://www.demo-gantry5.en-toutes-lettres.fr/en/particles-en/fss-en" target="_blank">See demo&nbsp;<i class="fa fa-fw fa-external-link"></i></a></div>'
+      content: '<div style="color: #5fa0c0"><h4>FSS particle v3.0</h4></div><div class="float-left"><img src="http://www.demo-gantry5.en-toutes-lettres.fr/images/etl_gantry_particles.png" alt="En toutes lettres - gantry particles"></div><div class="settings-param-field">&nbsp;&nbsp;&nbsp;<a href="http://www.demo-gantry5.en-toutes-lettres.fr/en/particles-en/fss-en" target="_blank">See demo&nbsp;<i class="fa fa-fw fa-external-link"></i></a></div>'
 
     _tabs:
       type: container.tabs
